@@ -2,7 +2,7 @@
 
 import logging
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import soundfile as sf
 
@@ -23,10 +23,10 @@ class FireRedAsr2SystemConfig:
     asr_type: str = "aed"
     asr_model_dir: str = "pretrained_models/FireRedASR2-AED"
     punc_model_dir: str = "pretrained_models/FireRedPunc"
-    vad_config: FireRedVadConfig = FireRedVadConfig()
-    lid_config: FireRedLidConfig = FireRedLidConfig()
-    asr_config: FireRedAsr2Config = FireRedAsr2Config()
-    punc_config: FireRedPuncConfig = FireRedPuncConfig()
+    vad_config: FireRedVadConfig = field(default_factory=FireRedVadConfig)
+    lid_config: FireRedLidConfig = field(default_factory=FireRedLidConfig)
+    asr_config: FireRedAsr2Config = field(default_factory=FireRedAsr2Config)
+    punc_config: FireRedPuncConfig = field(default_factory=FireRedPuncConfig)
     asr_batch_size: int = 1
     punc_batch_size: int = 1
     enable_vad: bool = True
