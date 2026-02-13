@@ -23,7 +23,8 @@ FireRedASR2S is a state-of-the-art (SOTA), industrial-grade, all-in-one ASR syst
 
 
 ## 🔥 News
-- [2026.02.12] We release FireRedASR2S (FireRedASR2-AED, FireRedVAD, FireRedLID, and FireRedPunc) with model weights and inference code. Download links below. Technical report and finetuning code coming soon.
+- [2026.02.13] 🚀 Support TensorRT-LLM inference acceleration for FireRedASR2-AED (contributed by NVIDIA). Benchmark on AISHELL-1 test set shows **12.7x speedup** over PyTorch baseline (single H20).
+- [2026.02.12] We release FireRedASR2S (FireRedASR2-AED, FireRedVAD, FireRedLID, and FireRedPunc) with **model weights and inference code**. Download links below. Technical report and finetuning code coming soon.
 
 
 
