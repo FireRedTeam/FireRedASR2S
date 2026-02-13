@@ -1,0 +1,25 @@
+[project]
+name = "triton-tensorrt"
+version = "0.1.0"
+description = "FireRed ASR Triton TensorRT runtime"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "tensorrt_llm==0.20.0",
+    "onnx==1.18.0",
+    "cuda-python==12.9.0",
+    "torchaudio==2.7.0",
+    "kaldiio",
+    "librosa",
+    # kaldifeat: wheel from Hugging Face (CUDA 12.6, torch 2.7, cp312)
+    "kaldifeat @ https://huggingface.co/csukuangfj/kaldifeat/resolve/main/cuda/1.25.5.dev20241029/linux/kaldifeat-1.25.5.dev20250425+cuda12.6.torch2.7.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = []
+namespaces = false
